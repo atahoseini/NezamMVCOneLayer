@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model NezamMVCOneLayer.Models.Member
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -37,8 +39,8 @@
             </ul>
 
             <ul class="navbar-nav mr-auto">
-                @Html.Partial("_Message")
-                @Html.Partial("_Notifications")
+                @*@Html.Partial("_Message")
+                @Html.Partial("_Notifications")*@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
                         <i class="fa fa-th-large"></i>
@@ -57,8 +59,14 @@
                         <div class="image">
                             <img src="https://www.gravatar.com/avatar/52f0fbcbedee04a121cba8dad1174462?s=200&d=mm&r=g" class="img-circle elevation-2" alt="User Image">
                         </div>
-                        <div class="info">
-                            <a href="#" class="d-block">امیر موسی پور</a>
+                        <div>
+                            <a href="#" class="d-block">@Model.FirstName  @Model.LastName</a>
+                        </div>
+                        <div>
+                            <a href="#" class="d-block">@Model.Field.FieldName</a>
+                        </div>
+                        <div>
+                            <a href="#" class="d-block">@Model.City.CityName</a>
                         </div>
                     </div>
 

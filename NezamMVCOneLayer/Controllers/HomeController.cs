@@ -46,7 +46,7 @@ namespace NezamMVCOneLayer.Controllers
                     ViewData["FieldName"] = objFromDb.Field.FieldName;
                     ViewData["CityId"] = objFromDb.CityId;
                     ViewData["CityName"] = objFromDb.City.CityName;
-                    return View("Index");
+                    return View("Index", objFromDb);
                 }
                 else
                     TempData["msg"] = "Admin id or Password is wrong.!";
