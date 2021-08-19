@@ -29,7 +29,9 @@ namespace NezamMVCOneLayer
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();  
         }
