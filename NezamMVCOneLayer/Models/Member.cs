@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,8 +22,6 @@ namespace NezamMVCOneLayer.Models
         [StringLength(50)]
         public string FatherFirstName { get; set; }
         [StringLength(50)]
-        public string FatherLastName { get; set; }
-        [StringLength(50)]
         public string MotherFirstName { get; set; }
         [StringLength(50)]
         public string MotherLastName { get; set; }
@@ -30,6 +29,7 @@ namespace NezamMVCOneLayer.Models
         public string Shsh { get; set; }
         [StringLength(50)]
         public string CodeMeli { get; set; }
+        public DateTime BirthDate { get; set; }
         public int Byear { get; set; }
         public int Bmonth { get; set; }
 
@@ -56,6 +56,7 @@ namespace NezamMVCOneLayer.Models
         [ForeignKey(nameof(FieldId))]
         public Field Field { get; set; }
 
+        public Boolean isAuthorized { get; set; }
         public virtual ICollection<Elect> Elects { get; set; }
     }
 
