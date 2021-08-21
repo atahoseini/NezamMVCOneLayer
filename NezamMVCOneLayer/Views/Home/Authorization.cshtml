@@ -5,51 +5,51 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th>ردیف</th>
-            <th>نام پدر</th>
-        </tr>
-
-       @foreach (var item in Model)
-        {
-        <tr>
-            <td>@item.id</td>
-            <td>@item.FatherName</td>
-            <td>@item.IsFather.ToString()</td>
-        </tr>
-        }
-    </table>
-
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th>ردیف</th>
-            <th>نام مادر</th>
-        </tr>
-        @foreach (var item in Model)
-        {
+ <div>
+        <table cellpadding="0" cellspacing="0">
             <tr>
-                <td>@item.id</td>
-                <td>@item.MotherName</td>
-                <td>@item.IsMother.ToString()</td>
+                <th>ردیف</th>
+                <th>نام پدر</th>
             </tr>
-        }
-    </table>
 
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th>ردیف</th>
-            <th>نام مادر</th>
-        </tr>
-        @foreach (var item in Model)
-        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.FatherName</td>
+                    <td>@item.IsFather.ToString()</td>
+                </tr>
+            }
+        </table>
+
+        @*<table cellpadding="0" cellspacing="0">
             <tr>
-                <td>@item.id</td>
-                <td>@item.ShSH</td>
-                <td>@item.IsSHSH.ToString()</td>
+                <th>ردیف</th>
+                <th>نام مادر</th>
             </tr>
-        }
-    </table>
-</div>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.MotherName</td>
+                    <td>@item.IsMother.ToString()</td>
+                </tr>
+            }
+        </table>
+
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>ردیف</th>
+                <th>نام مادر</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.ShSH</td>
+                    <td>@item.IsSHSH.ToString()</td>
+                </tr>
+            }
+        </table>*@
+    </div>
 

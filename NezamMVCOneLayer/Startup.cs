@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NezamMVCOneLayer.Services.Members;
 
 namespace NezamMVCOneLayer
 {
@@ -30,6 +31,10 @@ namespace NezamMVCOneLayer
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IIsUserAuthenticatedService, IsUserAuthenticatedService>();
+            services.AddScoped<IGetCheckupUsersService, GetCheckupUsersService>();
+
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();  
         }

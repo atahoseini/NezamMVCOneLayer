@@ -12,15 +12,15 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="form-group">
-            <label asp-for="Parvandeh">شماره پرونده</label>
-            <input asp-for="Parvandeh" />
-            <span asp-validation-for="Parvandeh"></span>
+            <label asp-for="@Model.Parvandeh">شماره پرونده</label>
+            <input asp-for="@Model.Parvandeh" />
+            <span asp-validation-for="@Model.Parvandeh"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="Password">کلمه عبور</label>
-            <input asp-for="Password" />
-            <span asp-validation-for="Password"></span>
+            <label asp-for="@Model.Password">کلمه عبور</label>
+            <input asp-for="@Model.Password" />
+            <span asp-validation-for="@Model.Password"></span>
         </div>
         <input class="btn btn-blue text-center" type="submit" value="ورود" />
     </div>

@@ -24,6 +24,10 @@ namespace NezamMVCOneLayer.DataAccess.Repository
                 objFromDb.FirstName = entity.FirstName;
             }
         }
+        public Member IsUserAuthenticated(string parvande, string password)
+        {
+            return _db.Members.FirstOrDefault(member => member.Parvandeh == parvande && member.Password == password);
+        }
     }
 
 }
