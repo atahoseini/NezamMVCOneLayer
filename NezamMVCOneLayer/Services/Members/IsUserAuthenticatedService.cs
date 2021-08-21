@@ -21,7 +21,7 @@ namespace NezamMVCOneLayer.Services.Members
         {
             if (string.IsNullOrEmpty(parvande) || string.IsNullOrEmpty(password))
             {
-                return false;
+                return null;
             }
 
             return unitWork.Member.IsUserAuthenticated(parvande, password);
